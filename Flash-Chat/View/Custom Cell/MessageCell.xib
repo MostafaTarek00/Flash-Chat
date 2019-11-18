@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="customMessageCell" rowHeight="178" id="KGk-i7-Jjw" customClass="CustomMessageCell" customModule="Flash_Chat" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80.5"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uGF-cw-XR7">
+                        <rect key="frame" x="0.0" y="10" width="53" height="53"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="53" id="YbR-OI-ZPb"/>
+                            <constraint firstAttribute="height" constant="53" id="gBh-2V-dYC"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t58-He-o3R" userLabel="Message Background">
+                        <rect key="frame" x="59" y="10" width="251" height="60"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHI-rM-5h0" userLabel="Sender Username">
+                                <rect key="frame" x="9" y="0.0" width="244" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nX0-Rp-STJ" userLabel="Message Body">
+                                <rect key="frame" x="9" y="16" width="244" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="mHI-rM-5h0" secondAttribute="trailing" constant="-2" id="4qs-JW-dXu"/>
+                            <constraint firstItem="nX0-Rp-STJ" firstAttribute="leading" secondItem="t58-He-o3R" secondAttribute="leading" constant="9" id="65w-bk-bhL"/>
+                            <constraint firstAttribute="bottom" secondItem="nX0-Rp-STJ" secondAttribute="bottom" constant="20" id="V4I-rQ-lE8"/>
+                            <constraint firstItem="mHI-rM-5h0" firstAttribute="top" secondItem="t58-He-o3R" secondAttribute="top" id="bqg-RJ-iQb"/>
+                            <constraint firstItem="nX0-Rp-STJ" firstAttribute="top" secondItem="mHI-rM-5h0" secondAttribute="bottom" constant="-2" id="eOh-25-CQC"/>
+                            <constraint firstAttribute="trailing" secondItem="nX0-Rp-STJ" secondAttribute="trailing" constant="-2" id="hd8-Vu-eP7"/>
+                            <constraint firstItem="mHI-rM-5h0" firstAttribute="leading" secondItem="t58-He-o3R" secondAttribute="leading" constant="9" id="rsg-gG-yjL"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="t58-He-o3R" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="5t9-j6-S3S"/>
+                    <constraint firstItem="uGF-cw-XR7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="9Al-kU-jBc"/>
+                    <constraint firstItem="t58-He-o3R" firstAttribute="leading" secondItem="uGF-cw-XR7" secondAttribute="trailing" constant="6" id="aTK-dr-V80"/>
+                    <constraint firstAttribute="trailing" secondItem="t58-He-o3R" secondAttribute="trailing" constant="10" id="bWN-aV-Jbx"/>
+                    <constraint firstAttribute="bottom" secondItem="t58-He-o3R" secondAttribute="bottom" constant="10" id="eCI-2q-Bg4"/>
+                    <constraint firstItem="uGF-cw-XR7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="z5g-FA-8me"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="avatarImageView" destination="uGF-cw-XR7" id="WW5-Ip-Ahl"/>
+                <outlet property="messageBackground" destination="t58-He-o3R" id="sxJ-TZ-1gx"/>
+                <outlet property="messageBody" destination="nX0-Rp-STJ" id="VOX-ma-3RD"/>
+                <outlet property="senderUsername" destination="mHI-rM-5h0" id="Tnf-OR-xFq"/>
+            </connections>
+            <point key="canvasLocation" x="229.71014492753625" y="135.26785714285714"/>
+        </tableViewCell>
+    </objects>
+</document>
