@@ -13,7 +13,7 @@ import ChameleonFramework
 
 class ChatViewController: UIViewController , UITableViewDelegate , UITableViewDataSource , UITextFieldDelegate{
     
-    
+    //Var
     var messageArray : [Message] = [Message]()
     
     
